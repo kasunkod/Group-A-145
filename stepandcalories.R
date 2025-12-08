@@ -26,6 +26,10 @@ axis(1,
      labels = FALSE,
      tck    = -0.01)
 
+abline(lm(calories_burned ~ step_count, data = X25),
+       col = "red",
+       lwd = 2) 
+
 cor.test(dfCalStep$Steps, dfCalStep$Calories, method="spearman" , exact = FALSE)
 
 hist(X25$calories_burned,
@@ -54,6 +58,7 @@ curve(dnorm(x, mean = mean_cal, sd = sd_cal),
       lwd = 2,
 
       add = TRUE)
+
 
 
 
