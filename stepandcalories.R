@@ -38,6 +38,12 @@ hist(X25$calories_burned,
      xaxt   = "n",   
      las    = 1)
 
+rng <- range(X25$calories_burned, na.rm = TRUE)
+axis(1,
+     at     = seq(floor(rng[1]/25)*25, 300, by = 25),
+     labels = seq(floor(rng[1]/25)*25, 300, by = 25),
+     las    = 2)
+
 mean_cal <- mean(X25$calories_burned, na.rm = TRUE)
 sd_cal <- sd(X25$calories_burned, na.rm = TRUE)
 
@@ -46,5 +52,6 @@ curve(dnorm(x, mean = mean_cal, sd = sd_cal),
       lwd = 2,
 
       add = TRUE)
+
 
 
