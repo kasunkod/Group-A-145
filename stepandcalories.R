@@ -38,6 +38,8 @@ hist(X25$calories_burned,
      xaxt   = "n",   
      las    = 1)
 
+mtext("Density", side = 2, line = 3)
+
 rng <- range(X25$calories_burned, na.rm = TRUE)
 axis(1,
      at     = seq(floor(rng[1]/25)*25, 300, by = 25),
@@ -52,6 +54,7 @@ curve(dnorm(x, mean = mean_cal, sd = sd_cal),
       lwd = 2,
 
       add = TRUE)
+
 
 
 
