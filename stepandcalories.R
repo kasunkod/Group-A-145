@@ -34,7 +34,9 @@ hist(X25$calories_burned,
      xlab = "Calories Burned",
      col = "lightblue",
      border = "black",
-     freq = FALSE)
+     freq = FALSE
+     xaxt   = "n",   
+     las    = 1)
 
 mean_cal <- mean(X25$calories_burned, na.rm = TRUE)
 sd_cal <- sd(X25$calories_burned, na.rm = TRUE)
@@ -44,4 +46,5 @@ curve(dnorm(x, mean = mean_cal, sd = sd_cal),
       lwd = 2,
 
       add = TRUE)
+
 
