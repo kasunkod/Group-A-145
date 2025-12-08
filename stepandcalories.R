@@ -12,7 +12,7 @@ plot(X25$step_count, X25$calories_burned,
      xlab="Step Count",
      ylab="Calories Burned",
      pch=19,
-     col="blue"
+     col="blue",
  xaxt = "n",
  las = 1))
 
@@ -52,6 +52,7 @@ curve(dnorm(x, mean = mean_cal, sd = sd_cal),
       lwd = 2,
 
       add = TRUE)
+
 
 
 
