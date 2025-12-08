@@ -7,10 +7,10 @@ dfCalStep$Steps <- as.numeric(dfCalStep$step_count)
 cor(dfCalStep$Calories, dfCalStep$Steps, use="pairwise.complete.obs", method="spearman")
 
 plot(X25$step_count, X25$calories_burned,
-     main="Step Count vs Calories Burned",
-     sub="Does taking more steps lead to buring more calories?",
-     xlab="Calories Burned",
-     ylab="Step Count",
+     main = "Does taking more steps lead to burning more calories?",
+     sub="Calories Burned vs Step Count",
+     xlab="Step Count",
+     ylab="Calories Burned",
      pch=19,
      col="blue")
 
@@ -31,4 +31,5 @@ sd_cal <- sd(X25$calories_burned, na.rm = TRUE)
 curve(dnorm(x, mean = mean_cal, sd = sd_cal),
       col = "red",
       lwd = 2,
+
       add = TRUE)
