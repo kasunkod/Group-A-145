@@ -12,8 +12,19 @@ plot(X25$step_count, X25$calories_burned,
      xlab="Step Count",
      ylab="Calories Burned",
      pch=19,
-     col="blue")
+     col="blue"
+ xaxt = "n",
+ las = 1))
 
+axis(1,
+     at     = seq(0, 8000, by = 1000),
+     labels = seq(0, 8000, by = 1000),
+     las    = 2)
+
+axis(1,
+     at     = seq(0, 8000, by = 500),
+     labels = FALSE,
+     tck    = -0.01)
 
 cor.test(dfCalStep$Steps, dfCalStep$Calories, method="spearman" , exact = FALSE)
 
@@ -33,3 +44,4 @@ curve(dnorm(x, mean = mean_cal, sd = sd_cal),
       lwd = 2,
 
       add = TRUE)
+
